@@ -1,6 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Malcom Voygt | Freelance Copywriter',
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.ContentfulSpaceId,
+        accessToken: process.env.ContentfulAccessToken,
+      },
+    },
+  ],
 }
