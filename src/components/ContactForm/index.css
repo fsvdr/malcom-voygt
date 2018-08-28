@@ -1,0 +1,32 @@
+:root {
+  --system-font: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+input, textarea {
+  font-family: var(--system-font);
+  font-size: 0.875em;
+  font-weight: 200;
+  background-color: #000000;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  color: #f1f1f1;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 4em auto 0;
+}
+
+.form input {
+  width: calc(50% - 0.25em);
+  margin: 0.5em 0;
+}
+
+button[type="submit"] {
+  width: 100%;
+  border: 0;
+  margin: 2em auto 0;
+}

@@ -1,0 +1,30 @@
+.client {
+  flex: auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 10em;
+  min-width: 16em;
+  margin: 0 1.5em 1.5em 0;
+  padding: 1em;
+  background-color: #efefef;
+  border-radius: 8px;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+
+  &:nth-child(4n+1){
+    height: 14em;
+  }
+
+  &:nth-child(4n+2){
+    height: 12em;
+  }
+
+  &:nth-child(4n+3){
+    height: 10em;
+  }
+}

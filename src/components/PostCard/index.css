@@ -1,0 +1,32 @@
+.post {
+  flex: auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  height: 12em;
+  min-width: 12em;
+  margin: 0 1.5em 1.5em 0;
+  padding: 0.5em 1em;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+
+  &:nth-child(4n+1){
+    width: 12em;
+  }
+
+  &:nth-child(4n+2){
+    width: 14em;
+  }
+
+  &:nth-child(4n+3){
+    width: 12em;
+  }
+}
