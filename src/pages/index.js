@@ -17,10 +17,10 @@ const IndexPage = ({ data }) => (
         </a>
       </div>
       <div className="portfolio__featured">
-        {data.allContentfulPortfolio.edges.map((e, i) => (
+        {data.allContentfulClient.edges.map((e, i) => (
           <ClientCard
-            name={e.node.client}
-            work={e.node.workDescription}
+            name={e.node.name}
+            work={e.node.workDesctiption}
             key={i}
           />
         ))}
@@ -53,11 +53,11 @@ export default IndexPage
 
 export const query = graphql`
   query data {
-    allContentfulPortfolio {
+    allContentfulClient {
       edges {
         node {
-          client
-          workDescription
+          name
+          workDesctiption
         }
       }
     }

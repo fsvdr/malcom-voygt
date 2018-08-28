@@ -9,7 +9,7 @@ const path = require('path')
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
   return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve(`src/templates/blog.js`)
+    const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
     // Query for markdown nodes to use in creating pages.
     resolve(
       graphql(
@@ -28,7 +28,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                       url
                     }
                   }
-                  post {
+                  content {
                     childMarkdownRemark {
                       html
                     }
@@ -52,7 +52,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             punchLine,
             category,
             cover,
-            post,
+            content,
           } = edge.node
           createPage({
             path: `${slug}`, // required
@@ -64,7 +64,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               category,
               punchLine,
               cover,
-              post,
+              content,
             },
           })
         })

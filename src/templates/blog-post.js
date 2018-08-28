@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
-import './blog.css'
+import './blog-post.css'
 
 const BlogPage = ({
-  pathContext: { title, punchLine, category, releaseDate, cover, post },
+  pathContext: { title, punchLine, category, releaseDate, cover, content },
 }) => (
   <div className="blog-post">
     <Link to="/" className="anchor-home">
@@ -22,7 +22,7 @@ const BlogPage = ({
     <div className="blog-post__content">
       <h2>{punchLine}</h2>
       <div
-        dangerouslySetInnerHTML={{ __html: post.childMarkdownRemark.html }}
+        dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }}
       />
     </div>
   </div>
