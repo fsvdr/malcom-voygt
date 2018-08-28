@@ -54,7 +54,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             cover,
             post,
           } = edge.node
-          console.log(post)
           createPage({
             path: `${slug}`, // required
             component: blogPostTemplate,
